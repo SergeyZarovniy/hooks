@@ -14,13 +14,13 @@ const App = () => {
 
 const HookSwitcher = () => {
 
-  const [color,setColor] = useState('white');
+  const [color,setColor] = useState('grey');
   const [fontSize,setFontSize] = useState(14);
 
   return (
     <div style={{padding: '10px', backgroundColor: color, fontSize: fontSize}}>
       Hello World
-  <button onClick = { () => setColor('black') }> Dark </button>
+  <button onClick = { () => setColor('grey') }> Dark </button>
   <button onClick = { () => setColor('white') }> Light </button>
   <button onClick = { () => setFontSize ( (s) => s+2 ) }> + </button>
 </div>
