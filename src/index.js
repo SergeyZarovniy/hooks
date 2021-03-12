@@ -9,14 +9,20 @@ const App = () => {
 };
 
 
-const [color] = useState('white')
+
 
 
 const HookSwitcher = () => {
+
+  const [color,setColor] = useState('white');
+  const [fontSize,setFontSize] = useState(14);
+
   return (
-    <div style={{padding: '10px', backgroundColor: 'white'}}>
-  <button onClick = { () => {} }> Dark </button>
-  <button onClick = { () => {} }> Light </button>
+    <div style={{padding: '10px', backgroundColor: color, fontSize: fontSize}}>
+      Hello World
+  <button onClick = { () => setColor('black') }> Dark </button>
+  <button onClick = { () => setColor('white') }> Light </button>
+  <button onClick = { () => setFontSize ( (s) => s+2 ) }> + </button>
 </div>
   );
 };
